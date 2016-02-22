@@ -1,0 +1,10 @@
+Challenges go here!
+
+<% @challenges.each do |challenge| %>
+	<div>
+		<h3><%= challenge.name %></h3>
+		<%= challenge.description %>
+		<%= challenge.reward %>
+	</div>
+	<br>
+<% end %>

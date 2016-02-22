@@ -11,10 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160222185029) do
+ActiveRecord::Schema.define(version: 20160222210144) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "challenge_users", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "challenge_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  add_index "challenge_users", ["challenge_id"], name: "index_challenge_users_on_challenge_id", using: :btree
+  add_index "challenge_users", ["user_id"], name: "index_challenge_users_on_user_id", using: :btree
+
+  create_table "challenges", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.date     "goal_date"
+    t.text     "reward"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email"
@@ -26,4 +45,6 @@ ActiveRecord::Schema.define(version: 20160222185029) do
     t.datetime "updated_at",            null: false
   end
 
+  add_foreign_key "challenge_users", "challenges"
+  add_foreign_key "challenge_users", "users"
 end
