@@ -1,16 +1,16 @@
 <%= form_for @challenge do |f| %>
 	<div>
-		<%= f.text_field :name, placeholder: "Name" %>
+		<%= f.text_field :name, placeholder: "Name", required: true %>
 	</div>
 	<div>
-		<%= f.text_field :description, placeholder: "Description", size: '60x6' %>
+		<%= f.text_field :description, placeholder: "Description", size: '60x6', required: true %>
 	</div>
 	<div>
 		<label> Goal Date </label>
-		<%= f.date_select :goal_date, placeholder: "Goal Date" %>
+		<%= f.date_select :goal_date, placeholder: "Goal Date", required: true %>
 	</div>
 	<div> 
-		<%= f.text_field :reward, placeholder: "Reward" %>
+		<%= f.text_field :reward, placeholder: "Reward", required: true %>
 	</div>
 	<%= f.submit %>
 <% end %>

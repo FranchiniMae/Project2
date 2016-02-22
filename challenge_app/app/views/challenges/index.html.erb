@@ -3,8 +3,9 @@ Challenges go here!
 <% @challenges.each do |challenge| %>
 	<div>
 		<h3><%= challenge.name %></h3>
-		<%= challenge.description %>
+		<%= challenge.description %><br>
 		<%= challenge.reward %>
 	</div>
+	<%= link_to "Delete Challenge", @challenge, method: :delete %>
 	<br>
 <% end %>
