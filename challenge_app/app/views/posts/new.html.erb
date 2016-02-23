@@ -1,0 +1,9 @@
+<%= form_for @post do |f| %>
+	<div>
+		<%= f.text_field :comment, placeholder: "Comment", required: true %>
+	</div>
+	<div>
+		<%= f.text_field :picture, placeholder: "Picture URL" %>
+	</div>
+	<%= f.submit %>
+<% end %>

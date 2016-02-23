@@ -10,3 +10,12 @@
 	<%= @challenge.reward %>
 </div>
 	<%= link_to "Delete Challenge", @challenge, method: :delete %>
+
+<h1>Posts for Challenge</h1>
+
+<% @challenge.posts.each do |post| %>
+	<div>
+		<h3><%= post.comment %></h3>
+		<%= post.picture %><br>
+	</div>
+<% end %> 

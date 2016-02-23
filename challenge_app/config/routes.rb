@@ -19,5 +19,6 @@ Rails.application.routes.draw do
   # put "/challenges/:id", to: "challenges#update"
 
   resources :challenges
+  resources :posts
 
 end
