@@ -1,3 +1,13 @@
 <div>
 	Welcome, <%= @user.first_name %>
 </div>
+
+<h3>upcoming challenges</h3>
+
+<% @user.challenges.each do |challenge| %>
+	<div>
+		<h3><%= challenge.name %></h3>
+	</div>
+<% end %> 
+
+<h3>completed challenges</h3>

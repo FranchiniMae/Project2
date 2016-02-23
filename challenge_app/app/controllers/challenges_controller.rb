@@ -12,6 +12,7 @@ class ChallengesController < ApplicationController
 
 	def create
 		@challenge = Challenge.create(challenge_params)
+		@challenge.users.push(current_user)
 		redirect_to "/challenges"
 	end 
 
@@ -26,6 +27,7 @@ class ChallengesController < ApplicationController
 	def update
 		@challenge = Challenge.find(params[:id])
 		@challenge.update_attributes(challenge_params)
+		@challenge.save
 		redirect_to challenges_path
 	end 
 

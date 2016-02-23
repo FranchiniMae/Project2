@@ -8,4 +8,10 @@ Challenges go here!
 	</div>
 	<%= link_to "Delete Challenge", @challenge, method: :delete %>
 	<br>
+
+	<% if @current_user %>
+		<%= button_to "Join", challenge_users_path(challenge) %>
+	<% end %>
+
+
 <% end %>

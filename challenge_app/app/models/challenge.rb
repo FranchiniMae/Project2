@@ -1,4 +1,6 @@
 class Challenge < ActiveRecord::Base
-	belongs_to :user
 	has_many :posts
+
+	has_many :challenge_users
+	has_many :users, through: :challenge_users
 end

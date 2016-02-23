@@ -8,7 +8,8 @@ class User < ActiveRecord::Base
 		@user.try(:authenticate, params[:password])
 	end
 
-	has_many :challenges
+	has_many :challenge_users
+	has_many :challenges, through: :challenge_users
 	has_many :posts
 
 end
