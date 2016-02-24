@@ -1,3 +1,6 @@
+<h2><%= @challenge.name %></h2>
+
+
 <%= form_for @post do |f| %>
 	<div>
 		<%= f.text_field :comment, placeholder: "Comment", required: true %>

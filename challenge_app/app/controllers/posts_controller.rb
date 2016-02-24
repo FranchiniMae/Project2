@@ -23,11 +23,13 @@ class PostsController < ApplicationController
 
 	def show
 		@post = Post.find(params[:id])
+		@challenge = Challenge.find(@post.challenge_id)
 		render :show
 	end 
 
 	def edit
 		@post = Post.find(params[:id])
+		@challenge = Challenge.find(@post.challenge_id)
 		render :edit
 	end
 

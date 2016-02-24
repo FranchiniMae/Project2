@@ -1,7 +1,6 @@
 module SessionsHelper
 
 	def login(user)
-		#check to see if the user.id poses a problem
 		session[:user_id] = user.id
 		@current_user = user
 	end 
