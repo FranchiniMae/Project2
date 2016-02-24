@@ -2,11 +2,13 @@
 	Welcome, <%= @user.first_name %>
 </div>
 
+<h4><%= link_to "Challenges", challenges_path %></h4>
+
 <h3>upcoming challenges</h3>
 
 <% @user.challenges.each do |challenge| %>
 	<div>
-		<h3><%= challenge.name %></h3>
+		<h3><%= link_to challenge.name, challenge_path(challenge) %></h3>
 	</div>
 <% end %> 
 

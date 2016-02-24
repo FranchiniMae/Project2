@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   resources :challenges
 
   get "/users/:user_id/challenges", to: "challenge_users#index", as: "user_challenges"
+  post "/challenges/:challenge_id/users", to: "challenge_users#create", as: "challenge_users"
   #get users to show up on challenges
 
   resources :posts

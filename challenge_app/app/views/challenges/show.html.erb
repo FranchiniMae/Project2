@@ -21,8 +21,15 @@
 	</div>
 <% end %> 
 
+<%= link_to "Create a Post", new_post_path %>
+
 <h1>Members in this Challenge</h1>
-<% #this will be simiar to above? Want to get users to join challenge first (if they didnt create it), and then have them show up on the challenge page %>
+
+<%= @challenge.users.each do |user| %>
+	<div>
+		<%= user.first_name %>
+	</div>
+<% end %>
 
 
 

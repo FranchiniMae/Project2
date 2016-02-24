@@ -6,13 +6,20 @@ class PostsController < ApplicationController
 
 	def new
 		@post = Post.new
+		@challenges = Challenge.all
 		render :new
 	end
 
 	def create
-		post_params = params.require(:post).permit(:comment, :picture)
+		p @post
+		post_params = params.require(:post).permit(:comment, :picture, :challenge_id)
 		@post = Post.create(post_params)
-		redirect_to "/posts"
+		challenge = @post.challenge_id
+		if @post.save
+			redirect_to challenge_path(challenge)
+		else
+			render :new
+		end 
 	end 
 
 end

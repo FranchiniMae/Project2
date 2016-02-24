@@ -2,6 +2,7 @@ class ChallengesController < ApplicationController
 
 	def index
 		@challenges = Challenge.all
+		current_user #added this last
 		render :index
 	end 
 

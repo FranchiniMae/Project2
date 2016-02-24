@@ -2,16 +2,16 @@ Challenges go here!
 
 <% @challenges.each do |challenge| %>
 	<div>
-		<h3><%= challenge.name %></h3>
+		<h2><%= link_to challenge.name, challenge_path(challenge) %></h2>
 		<%= challenge.description %><br>
 		<%= challenge.reward %>
 	</div>
-	<%= link_to "Delete Challenge", @challenge, method: :delete %>
-	<br>
 
 	<% if @current_user %>
 		<%= button_to "Join", challenge_users_path(challenge) %>
 	<% end %>
-
+	<br>
 
 <% end %>
+
+<div>
