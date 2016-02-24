@@ -1,0 +1,5 @@
+<%= @post.comment %><br>
+<img src="<%= @post.picture %>"/>
+
+<%= button_to "Edit Post", edit_post_path(@post), :method => :get %>
+<%= button_to "Delete Post", @post, :method => :delete %>

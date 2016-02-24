@@ -6,9 +6,5 @@
 		<%= f.url_field :picture, placeholder: "Picture URL" %>
 	</div>
 
-	<div>
-		<%= f.collection_select :challenge_id, @challenges, :id, :name %>
-	</div>
-
-	<%= f.submit %>
+	<%= f.submit "Update Post" %>
 <% end %>

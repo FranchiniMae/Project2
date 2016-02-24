@@ -16,18 +16,21 @@
 
 <% @challenge.posts.each do |post| %>
 	<div>
-		<h3><%= post.comment %></h3>
-		<%= post.picture %><br>
+		<h3><%= link_to post.comment, post_path(post) %></h3>
+		<img src="<%= post.picture %>"/><br>
 	</div>
 <% end %> 
 
+
+<div>
 <%= link_to "Create a Post", new_post_path %>
+</div>
 
 <h1>Members in this Challenge</h1>
 
-<%= @challenge.users.each do |user| %>
+<% @challenge.users.each do |u| %>
 	<div>
-		<%= user.first_name %>
+		<%= u.first_name %>
 	</div>
 <% end %>
 
