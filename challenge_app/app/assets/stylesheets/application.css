@@ -37,9 +37,57 @@
 }
 
 .container {
-	width: 90%;
+	width: 80%;
 }
 
 .userhome {
-	font-size: 1.5em;
+	font-size: 3em;
+	margin-bottom: 40px;
 }
+
+#upcoming {
+	font-size: 2em;
+	font-family: 'Michroma', sans-serif;
+}
+
+#edituser{
+	text-align: center;
+}
+
+#newuser {
+	text-align: center;
+}
+
+#h1user {
+	font-family: 'Michroma', sans-serif;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+#deleteuser {
+	text-align: center;
+}
+
+.createform {
+	text-align: center;
+}
+
+#challengeinfo {
+	text-align: center;
+}
+
+.postbody {
+	text-align: center;
+}
+
+.posttitle {
+	color: grey;
+}
+
+#challengepic {
+
+
+}
+
+
+

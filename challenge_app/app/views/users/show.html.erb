@@ -4,17 +4,17 @@
 
 <div class="container">
 
-<p> upcoming challenges <span class="badge"><%= @user.challenges.count %></span> </p>
+<p id="upcoming"> upcoming challenges <span class="badge"><%= @user.challenges.count %></span> </p>
 
 </div>
 
 <div class="container">
 
 <% @user.challenges.each do |challenge| %>
-	<div class="row">
-	  <div class="col-sm-6 col-md-4">
+	<div>
+	  <div class="col-xs-6 col-sm-4">
 	    <div class="thumbnail">
-	      <img src="http://static.ddmcdn.com/gif/penguin-slideshow-141121-78754162.jpg">
+	      <img id="challengepic" src="http://images.hilleberg.net/products/Tarra/Hilleberg-TarraGrn-Colombia-071CO0Q01oH-AgnieszkaANDMateuszWaligora.jpg">
 	      <div class="caption">
 	      	<h3>
 	        <%= link_to challenge.name, challenge_path(challenge) %></h3>
@@ -26,5 +26,6 @@
 	    </div>
 	  </div>
 <% end %> 
+
 </div>
 

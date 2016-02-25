@@ -3,13 +3,16 @@
 	<div>
 		<%= f.text_field :name, placeholder: "Name", size: '60x6', required: true %>
 	</div>
+	<Br>
 	<div>
 		<%= f.text_field :description, placeholder: "Description", size: '60x20', required: true %>
 	</div>
+	<Br>
 	<div>
 		<label> Goal Date </label>
 		<%= f.date_select :goal_date, placeholder: "Goal Date", required: true %>
 	</div>
+	<br>
 	<div> 
 		<%= f.text_field :reward, placeholder: "Reward", size: '60x6', required: true %>
 	</div><br>

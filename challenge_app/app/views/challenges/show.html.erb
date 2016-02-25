@@ -1,39 +1,42 @@
-<h1><%= @challenge.name %></h1>
+<h1 id="h1user"><%= @challenge.name %></h1>
 
-<div>Description:
-	<%= @challenge.description %>
-</div>
-<div>
-	<%= @challenge.goal_date %>
-</div>
-<div>
-	<%= @challenge.reward %>
-</div>
-	<%= link_to "Delete Challenge", @challenge, method: :delete %>
-	<br>
-
-<h1>Posts for Challenge</h1>
-
-<% @challenge.posts.each do |post| %>
-	<div>
-		<h3><%= link_to post.comment, post_path(post) %></h3>
-		<img src="<%= post.picture %>"/><br>
+<div id="challengeinfo">	
+	<div>Description:
+		<%= @challenge.description %>
 	</div>
-<% end %> 
-
-
-<div>
-<%= link_to "Create a Post", new_post_path %>
+	<div>Goal Date: 
+		<%= @challenge.goal_date %>
+	</div>
+	<div>Goal Reward: 
+		<%= @challenge.reward %>
+	</div>
 </div>
 
-<h1>Members in this Challenge</h1>
+<div class="postbody">
+	<h1 class="posttitle">Posts for Challenge</h1>
 
-<% @challenge.users.each do |u| %>
+	<% @challenge.posts.each do |post| %>
+		<div>
+			<%= link_to post.comment, post_path(post) %>
+			<img src="<%= post.picture %>"/><br>
+		</div>
+	<% end %> 
+
+
+
+	<Br>
 	<div>
-		<%= u.first_name %>
+	<%= link_to "Create a Post", new_post_path %>
 	</div>
-<% end %>
 
+	<h1 class="posttitle">Members in this Challenge</h1>
+
+	<% @challenge.users.each do |u| %>
+		<div>
+			<%= u.first_name %>
+		</div>
+	<% end %>
+</div>
 
 
 
