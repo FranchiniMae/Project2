@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+	before_action :logged_in?
+
 	def index
 		@posts = Post.all
 	end 
@@ -12,7 +14,7 @@ class PostsController < ApplicationController
 
 	def create
 		post_params = params.require(:post).permit(:comment, :picture, :challenge_id)
-		@post = Post.new(post_params)
+		@post = current_user.posts.new(post_params)
 		challenge = @post.challenge_id
 		if @post.save
 			redirect_to challenge_path(challenge)
@@ -30,7 +32,11 @@ class PostsController < ApplicationController
 	def edit
 		@post = Post.find(params[:id])
 		@challenge = Challenge.find(@post.challenge_id)
-		render :edit
+		if (@current_user == @post.user)
+			render :edit
+		else
+			redirect_to "/"
+		end 
 	end
 
 	def update

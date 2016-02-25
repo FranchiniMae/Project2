@@ -1,5 +1,7 @@
 class ChallengesController < ApplicationController
 
+	before_action :logged_in?
+
 	def index
 		@challenges = Challenge.all
 		current_user #added this last
@@ -23,6 +25,12 @@ class ChallengesController < ApplicationController
 
 	def edit
 		@challenge = Challenge.find(params[:id])
+		# if (@current_user == @challenge.user)
+		# 	render :edit
+		# else
+		# 	redirect_to "/"
+		# end 
+		#need to get the id of the person who posted the challenge
 	end
 
 	def update

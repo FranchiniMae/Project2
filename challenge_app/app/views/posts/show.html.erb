@@ -8,6 +8,7 @@
 <%# if the post owner is not logged in, do not show delete button %>
 
 
-
-<%= button_to "Edit Post", edit_post_path(@post), :method => :get %>
-<%= button_to "Delete Post", @post, :method => :delete %>
+<% if current_user && current_user.id == @post.user_id %>
+	<%= button_to "Edit Post", edit_post_path(@post), :method => :get %>
+	<%= button_to "Delete Post", @post, :method => :delete %>
+<% end %>

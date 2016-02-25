@@ -1,5 +1,7 @@
 class ChallengeUsersController < ApplicationController
 
+	before_action :logged_in?
+
 	def index
 		# @user = User.find(params[:user_id])
 		# @challenges = @user.challenges

@@ -1,0 +1,26 @@
+.brvename {
+	font-family: 'Michroma', sans-serif;
+	font-size: 120px;
+	font-weight: 900;
+	text-align: center;
+}
+
+#brveicon {
+	font-family: 'Michroma', sans-serif;
+	color: #000;
+}
+
+
+.signuplink {
+	list-style-type: none;
+}
+
+#SO {
+	margin-right:20px;
+	margin-left: -10px;
+}
+
+.createchallenge {
+	font-family: 'Michroma', sans-serif;
+	font-size: 100px;
+}

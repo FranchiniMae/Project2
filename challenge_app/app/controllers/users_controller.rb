@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-	before_action :logged_in?, only: [:show]
+	before_action :logged_in?, except: [:index, :new, :create]
 
 	def index
 		@users = User.all
@@ -23,6 +23,15 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		render :show
+	end 
+
+	def edit
+	end 
+
+	def update 
+	end 
+
+	def destroy
 	end 
 
 end

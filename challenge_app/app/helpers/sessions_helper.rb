@@ -12,6 +12,7 @@ module SessionsHelper
 	def logged_in?
 		if current_user == nil
 			redirect_to "/sign_in"
+			#add notice to this
 		end 
 	end 
 

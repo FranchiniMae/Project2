@@ -7,9 +7,20 @@
 <h3>upcoming challenges</h3>
 
 <% @user.challenges.each do |challenge| %>
-	<div>
-		<h3><%= link_to challenge.name, challenge_path(challenge) %></h3>
-	</div>
+	<div class="row">
+	  <div class="col-sm-6 col-md-4">
+	    <div class="thumbnail">
+	      <img src="http://static.ddmcdn.com/gif/penguin-slideshow-141121-78754162.jpg">
+	      <div class="caption">
+	      	<h3>
+	        <%= link_to challenge.name, challenge_path(challenge) %></h3>
+
+				<%= challenge.description %>
+				<%= challenge.goal_date%>
+				<%= challenge.reward %>	        
+	      </div>
+	    </div>
+	  </div>
+<!-- 	</div> -->
 <% end %> 
 
-<h3>completed challenges</h3>
