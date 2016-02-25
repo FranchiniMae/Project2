@@ -36,7 +36,10 @@
 	margin-left: -10px;
 }
 
-/*.row {
-	display: inline-block;
+.container {
+	width: 90%;
+}
 
-}*/
+.userhome {
+	font-size: 1.5em;
+}
