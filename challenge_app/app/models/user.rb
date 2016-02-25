@@ -7,8 +7,8 @@ class User < ActiveRecord::Base
 		@user.try(:authenticate, params[:password])
 	end
 
-	has_many :challenge_users
+	has_many :challenge_users, dependent: :destroy
 	has_many :challenges, through: :challenge_users
-	has_many :posts
+	has_many :posts, dependent: :destroy
 
 end

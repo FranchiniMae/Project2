@@ -14,8 +14,9 @@
 		<a class="navbar-brand" id="brveicon" href="/">BRVE</a>
 		<% if not current_user %>
 			<div>
-			<ul>
-			<li class="signuplink"><%= link_to "Sign Up", new_user_path %></li>
+			<ul class="nav navbar-nav navbar-right navbar-static-top">
+			<li class="homelink"><%= link_to "Sign Up", new_user_path %></li>
+			<li class="homelink" id="SO"><%= link_to "Log In", sign_in_path %></li>
 			</ul>
 			</div>
 		<% else %>
