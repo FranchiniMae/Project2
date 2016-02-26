@@ -13,7 +13,6 @@ class PostsController < ApplicationController
 	end
 
 	def create
-		post_params = params.require(:post).permit(:comment, :picture, :challenge_id)
 		@post = current_user.posts.new(post_params)
 		challenge = @post.challenge_id
 		if @post.save
@@ -41,7 +40,6 @@ class PostsController < ApplicationController
 	end
 
 	def update
-		post_params = post_params = params.require(:post).permit(:comment, :picture, :challenge_id)
 		@post = Post.find(params[:id])
 		@post.update_attributes(post_params)
 		@post.save
@@ -54,6 +52,12 @@ class PostsController < ApplicationController
 		@post.destroy
 		challenge = @post.challenge_id
 		redirect_to challenge_path(challenge)
+	end 
+
+	private
+
+	def post_params
+		post_params = params.require(:post).permit(:comment, :picture, :challenge_id)
 	end 
 
 end
