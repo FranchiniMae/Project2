@@ -1,57 +1,61 @@
-<h1 id="h1user"><%= @challenge.name %></h1>
+<div class="container">
 
-<div id="challengeinfo">	
-	<div><b>Description:</b>
-		<%= @challenge.description %>
-	</div>
-	<div><b>Goal Date:</b> 
-		<%= @challenge.goal_date %>
-	</div>
-	<div><b>Reward:</b> 
-		<%= @challenge.reward %>
-	</div><Br>
+	<h1 id="h1user"><%= @challenge.name %></h1>
 
-<%= link_to "Leave Challenge", @challenge_users, :method => :delete, :class => 'btn btn-primary' %><br><br>
-
-
-<% if current_user && current_user.id == @challenge.creator_id %>
-
-	<%= link_to "Edit Challenge", edit_challenge_path(@challenge), :method => :get, :class => 'btn btn-primary'%>
-
-	<%= link_to "Delete Challenge", @challenges, method: :delete, :class => 'btn btn-danger'%>
-
-<% end %>
-
-</div>
-
-
-<div class="postbody">
-	<h1 class="posttitle">Posts for Challenge</h1>
-
-	<% @challenge.posts.each do |post| %>
-		<div class="post">
-			<img id="postpic" src="<%= post.picture %>"/><br><Br>
-				<div class="postcomment">
-					<%= link_to post.comment, post_path(post), :class => 'postlink' %>
-				</div>
+	<div id="challengeinfo" class="col-xs-6 col-md-4">
+		<div>
+			<img id="challengepic" src="<%= @challenge.img_url %>">
+		</div><br>	
+		<div><b>Description:</b>
+			<%= @challenge.description %>
 		</div>
-	<% end %> 
-
-
-
-	<Br>
-	<div>
-	<%= link_to "Create a Post", new_post_path, :class => 'btn btn-primary' %>
-	</div>
-	<br>
-	<h1 class="posttitle">Members in this Challenge</h1>
-
-	<% @challenge.users.each do |u| %>
-		<div class="members">
-			<%= u.first_name %>
+		<div><b>Goal Date:</b> 
+			<%= @challenge.goal_date %>
 		</div>
+		<div><b>Reward:</b> 
+			<%= @challenge.reward %>
+		</div><Br>
+
+	<%= link_to "Leave Challenge", @challenge_users, :method => :delete, :class => 'btn btn-primary' %><br><Br>
+
+
+	<% if current_user && current_user.id == @challenge.creator_id %>
+
+		<%= link_to "Edit Challenge", edit_challenge_path(@challenge), :method => :get, :class => 'btn btn-primary'%>
+
+		<%= link_to "Delete Challenge", @challenges, method: :delete, :class => 'btn btn-danger'%>
+
 	<% end %>
-</div>
+	<Br>
+	<br>
+	<h1 class="posttitle members">Members in this Challenge</h1>
 
+		<% @challenge.users.each do |u| %>
+			<div class="members">
+				<%= u.first_name %>
+			</div>
+		<% end %>
+
+	</div>
+
+
+	<div class="col-xs-12 col-md-8" id="postbody">
+		<h1 class="posttitle">Members' Thoughts</h1>
+
+			<div>
+				<%= link_to "Create a Post", new_post_path, :class => 'btn btn-primary' %>
+			</div>
+		<br><br>
+
+		<% @challenge.posts.each do |post| %>
+			<div class="post col-xs-6 col-md-4">
+				<img id="postpic" src="<%= post.picture %>"/><br><Br>
+					<div class="postcomment">
+						<%= link_to post.comment, post_path(post), :class => 'postlink' %>
+					</div>
+			</div>
+		<% end %> 
+	</div>
+</div>
 
 

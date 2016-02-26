@@ -1,5 +1,5 @@
 <div>
-	<h1 id="h1user">Join A Challenge</h1>
+	<h1 id="h1user">JOIN A CHALLENGE</h1>
 </div>
 
 <div class="container">
@@ -8,12 +8,12 @@
 	<!-- 	<div> -->
 		  <div class="col-xs-4 col-sm-4">
 		    <div class="thumbnail">
-		      <img id="challengepic" src="<%= challenge.img_url %>">
+		      <img id="challengepic1" src="<%= challenge.img_url %>">
 					<h3>
-					<%= link_to challenge.name, challenge_path(challenge) %></h3>
+					<%= link_to challenge.name.upcase, challenge_path(challenge) %></h3>
 
 				<% if @current_user %>
-					<%= button_to "Join", challenge_users_path(challenge) %>
+					<%= button_to "Join", challenge_users_path(challenge), :class => 'btn btn-success' %>
 				<% end %>
 	     
 		      </div>

@@ -1,38 +1,49 @@
-	
-	<div class="container userhome">
-		Welcome, <%= @user.first_name %>
-	</div>
-
-<!-- 
-	<div class="profileinfo">
-		<div class="thumbnail profileimg">
-			<img id="profilepic" src="<%= @user.img_url %>">
+<div class="container">	
+	<div id="userinfo" class="col-xs-6 col-md-4">
+		<div class="userhome">
+			Welcome, <b id="username"><%= @user.first_name %></b>
 		</div>
-	</div> -->
 
 
+		<div class="profileinfo">
+			<div class="profileimg">
+				<img id="profilepic" src="<%= @user.img_url %>">
+			</div>
+			<br>
 
-	<div class="container">
+			<p id="stats"><b><%= @user.first_name %> <%= @user.last_name %>'s Stats</b></p>
 
-	<p id="upcoming"> upcoming challenges <span class="badge"><%= @user.challenges.count %></span> </p>
+			<p> Upcoming Challenges: <span class="badge"><%= @user.challenges.count %></span> </p>
+			<p> Number of Posts: <span class="badge"><%= @user.posts.count %></span> </p><br>
 
+			<%= link_to "Edit Profile", edit_user_path(current_user), :class => 'btn btn-primary'%>
+		</div>
 	</div>
 
-	<div class="container">
 
-	<% @user.challenges.each do |challenge| %>
-		<div>
-		  <div class="col-xs-6 col-sm-4">
-		    <div class="thumbnail">
-		      <img id="challengepic" src="<%= challenge.img_url %>">
-		      	<h3>
-		        <%= link_to challenge.name, challenge_path(challenge) %></h3>
-	     
-		      </div>
-		    </div>
-		  </div>
-	<% end %> 
+	<div id="userchallenges" class="col-xs-12 col-md-8">
 
+		<p id="upcoming">UPCOMING CHALLENGES</p>
+		<br>
+
+		</div>
+
+		<div class="container">
+
+		<% @user.challenges.each do |challenge| %>
+			<div>
+			  <div class="col-xs-6 col-sm-4">
+			    <div class="thumbnail">
+			      <img id="challengepic1" src="<%= challenge.img_url %>">
+			      	<h3>
+			        <%= link_to challenge.name, challenge_path(challenge) %></h3>
+		     
+			      </div>
+			    </div>
+			  </div>
+		<% end %> 
 	</div>
+</div>
+
 
 
