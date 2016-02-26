@@ -14,10 +14,12 @@ class ChallengesController < ApplicationController
 	end 
 
 	def create
-		@challenge = Challenge.create(challenge_params)
-		@challenge.users.push(current_user)
-		redirect_to "/challenges"
-		#when you create a challenge, you want to push the current user id into the challenge model
+		if @challenge = Challenge.create(challenge_params)
+
+			@challenge.users.push(current_user)
+			redirect_to "/challenges"
+			#when you create a challenge, you want to push the current user id into the challenge model
+		end
 	end 
 
 	def show
@@ -50,7 +52,7 @@ class ChallengesController < ApplicationController
 	private 
 
 	def challenge_params
-		challenge_params = params.require(:challenge).permit(:name, :description, :goal_date, :reward, :img_url)
+		challenge_params = params.require(:challenge).permit(:name, :description, :goal_date, :reward, :img_url, :creator_id)
 	end 
 
 end
