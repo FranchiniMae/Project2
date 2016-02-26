@@ -15,9 +15,16 @@ class ChallengeUsersController < ApplicationController
 	def create
 		@user = current_user
 		@challenge = Challenge.find(params[:challenge_id])
-		@user.challenges.push(@challenge)
+		@user_challenge = @user.challenges.push(@challenge)
+
 		redirect_to user_challenges_path(@user)
 		#user_challenges(@user) is not working
+	end
+
+	def destroy 
+		@user = current_user
+		@challenge = Challenge.find(params[:challenge_id])
+		@user_challenge.destroy
 	end
 
 	#change this so that it goes to the user homepage

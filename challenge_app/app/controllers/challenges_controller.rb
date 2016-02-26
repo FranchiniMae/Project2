@@ -17,6 +17,7 @@ class ChallengesController < ApplicationController
 		@challenge = Challenge.create(challenge_params)
 		@challenge.users.push(current_user)
 		redirect_to "/challenges"
+		#when you create a challenge, you want to push the current user id into the challenge model
 	end 
 
 	def show
