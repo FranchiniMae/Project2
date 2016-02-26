@@ -55,6 +55,7 @@
 #upcoming {
 	font-size: 2em;
 	font-family: 'Michroma', sans-serif;
+	text-align: center;
 }
 
 #edituser{
@@ -122,13 +123,14 @@
 	margin-bottom: 20px;
 }
 
-.thumbnail {
-
+.thumbnail>img {
+	width: 320px;
+	height: 220px;
 }
 
 #postpic {
-	width: 250px;
-	height: 200px;
+	width: 320px;
+	height: 220px;
 	border-radius: 5%;
 	border-color: #fff;
 }
@@ -161,7 +163,7 @@ ul {
     -o-background-size: cover;
     background-size: cover;
     margin-top: 0;	
-    height: 960px;
+    height: 800px;
 }
 
 .navbar {
@@ -211,3 +213,9 @@ ul {
 	margin-top: 5%;
 	color: green;
 }
+
+#instructions {
+	margin-top: 5%;
+}
+
+

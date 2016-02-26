@@ -17,6 +17,15 @@
 			<p> Number of Posts: <span class="badge"><%= @user.posts.count %></span> </p><br>
 
 			<%= link_to "Edit Profile", edit_user_path(current_user), :class => 'btn btn-primary'%>
+			<br>
+			<Br>
+			<br>
+			<p id="instructions">
+				<h3>What you can do:</h3><br>
+					Create your own Challenge<Br>
+					Join/Leave a Challenge<br>
+					Comment on a Challenge Page
+			</p>
 		</div>
 	</div>
 
@@ -26,24 +35,20 @@
 		<p id="upcoming">UPCOMING CHALLENGES</p>
 		<br>
 
-		</div>
-
 		<div class="container">
 
 		<% @user.challenges.each do |challenge| %>
 			<div>
-			  <div class="col-xs-6 col-sm-4">
+			  <div class="col-sm-5 col-md-6">
 			    <div class="thumbnail">
-			      <img id="challengepic1" src="<%= challenge.img_url %>">
-			      	<h3>
-			        <%= link_to challenge.name, challenge_path(challenge) %></h3>
-		     
+				      <img id="challengepic1" src="<%= challenge.img_url %>">
+				      	<h4>
+				        <%= link_to challenge.name, challenge_path(challenge) %></h4>
 			      </div>
 			    </div>
 			  </div>
 		<% end %> 
 	</div>
 </div>
-
 
 
