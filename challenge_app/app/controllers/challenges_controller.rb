@@ -17,13 +17,8 @@ class ChallengesController < ApplicationController
 		@challenge = Challenge.create(challenge_params)
 		@challenge.creator_id = current_user.id 
 		@challenge.save!
-
-		# @challenge = Challenge.create(challenge_params)
-
-			@challenge.users.push(current_user)
-			redirect_to "/challenges"
-			#when you create a challenge, you want to push the current user id into the challenge model
-
+		@challenge.users.push(current_user)
+		redirect_to "/challenges"
 	end 
 
 	def show
@@ -32,12 +27,12 @@ class ChallengesController < ApplicationController
 
 	def edit
 		@challenge = Challenge.find(params[:id])
-		# if (@current_user == @challenge.user)
-		# 	render :edit
-		# else
-		# 	redirect_to "/"
-		# end 
-		#need to get the id of the person who posted the challenge
+		if (@current_user.id == @challenge.creator_id)
+			render :edit
+		else
+			redirect_to "/",
+				error: "ILLEGAL ACTION"
+		end 
 	end
 
 	def update

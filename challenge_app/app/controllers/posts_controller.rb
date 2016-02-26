@@ -35,7 +35,8 @@ class PostsController < ApplicationController
 		if (@current_user == @post.user)
 			render :edit
 		else
-			redirect_to "/"
+			redirect_to "/",
+				error: "ILLEGAL ACTION"
 		end 
 	end
 
