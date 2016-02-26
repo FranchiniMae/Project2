@@ -5,5 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-Post.create({comment: "testing seed", challenge_id: 1})
-Post.create({comment: "testing seed 2", challenge_id: 2})
