@@ -15,10 +15,14 @@
 <%= button_to "Leave Challenge", @challenge_users, :method => :delete %>
 
 
-<!-- current_user.id -->
+
+<% if current_user && current_user.id == @challenge.creator_id %>
+
+	<%= button_to "Edit Challenge", edit_challenge_path(@challenge), :method => :get %>
 
 	<%= button_to "Delete Challenge", @challenges, method: :delete %>
 
+<% end %>
 
 
 <div class="postbody">
