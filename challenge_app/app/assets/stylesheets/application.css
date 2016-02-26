@@ -20,8 +20,16 @@
 	font-weight: 900;
 	text-align: center;
 	margin: 0;
-	padding-top: 20%;
+	padding-top: 17%;
 	color: #FFF;
+}
+
+#quote {
+	font-family: 'Michroma', sans-serif;
+	text-align: center;
+	margin-top: 1%;
+	color: #FFF;
+	font-size: .9em;
 }
 
 #brveicon {
@@ -34,13 +42,9 @@
 	list-style-type: none;
 }
 
-/*#SO {
-	margin-right:20px;
-	margin-left: -10px;
-}*/
-
 .container {
 	width: 80%;
+	margin-bottom: 7%;
 }
 
 .userhome {
@@ -64,7 +68,8 @@
 #h1user {
 	font-family: 'Michroma', sans-serif;
 	text-align: center;
-	margin-bottom: 40px;
+	margin-bottom: 3%;
+	margin-top: 5%;
 }
 
 #deleteuser {
@@ -78,7 +83,8 @@
 #challengeinfo {
 	margin-top:;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1em;
+	height: 700px;
 }
 
 #challengepic {
@@ -155,7 +161,7 @@ ul {
     -o-background-size: cover;
     background-size: cover;
     margin-top: 0;	
-    height: 750px;
+    height: 960px;
 }
 
 .navbar {
@@ -181,6 +187,7 @@ ul {
 #userinfo {
 	margin-top: 5%;
 	text-align: center;
+	height: 700px;
 }
 
 #userchallenges {
@@ -190,4 +197,9 @@ ul {
 #stats {
 	color: green;
 	font-size: 1.5em;
+}
+
+#challengeshow {
+	margin: 0 auto;
+	text-align: center;
 }

@@ -7,6 +7,7 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link href='https://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Playfair+Display' rel='stylesheet' type='text/css'>
 
 </head>
 <header class='clearfix'>
@@ -28,7 +29,7 @@
 			<div>
 				<ul class="nav navbar-nav navbar-right">
 				<li class="homelink"><%= link_to "SIGN UP", new_user_path %></li>
-				<li class="homelink" id="SO"><%= link_to "LOG IN", sign_in_path %></li>
+				<li class="homelink" id="SO"><%= link_to "LOGIN", sign_in_path %></li>
 				</ul>
 			</div>
 			<% else %>

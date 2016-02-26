@@ -5,8 +5,7 @@
 <div class="container">
 
 	<% @challenges.each do |challenge| %>
-	<!-- 	<div> -->
-		  <div class="col-xs-4 col-sm-4">
+		  <div id="challengeshow" class="col-xs-4 col-sm-4">
 		    <div class="thumbnail">
 		      <img id="challengepic1" src="<%= challenge.img_url %>">
 					<h3>
@@ -18,8 +17,6 @@
 	     
 		      </div>
 		    </div>
-		  <!-- </div> -->
-
 	<% end %>
 
 </div>
