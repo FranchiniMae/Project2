@@ -23,7 +23,7 @@
 		<% else %>
 		<div>
 			<ul class="nav navbar-nav navbar-right navbar-static-top">
-				<li><%= link_to "Profile", user_path(current_user) %></li>
+				<li><%= link_to "#{current_user.first_name}", user_path(current_user) %></li>
 				<li><%= link_to "Edit Profile", edit_user_path(current_user) %></li>
 				<li><%= link_to "Challenges", challenges_path %></li>
 			  	<li id="AC"><%= link_to "Add Challenge", new_challenge_path %></li>
@@ -36,8 +36,10 @@
 
 <body>
 
-<%= yield %>
-<%= console %>
+<article>
+	<%= yield %>
+</article>
+
 
 </body>
 </html>

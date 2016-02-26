@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224054054) do
+ActiveRecord::Schema.define(version: 20160225192158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,7 @@ ActiveRecord::Schema.define(version: 20160224054054) do
     t.text     "reward"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "img_url"
   end
 
   create_table "posts", force: :cascade do |t|
@@ -54,6 +55,7 @@ ActiveRecord::Schema.define(version: 20160224054054) do
     t.string   "password_confirmation"
     t.datetime "created_at",            null: false
     t.datetime "updated_at",            null: false
+    t.string   "img_url"
   end
 
   add_foreign_key "challenge_users", "challenges"

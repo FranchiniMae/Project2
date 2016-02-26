@@ -19,6 +19,8 @@
 	font-size: 120px;
 	font-weight: 900;
 	text-align: center;
+	margin: 0;
+	padding-top: 20%;
 }
 
 #brveicon {
@@ -84,10 +86,40 @@
 	color: grey;
 }
 
-#challengepic {
+.profileimg {
+	height: auto; 
+    width: auto; 
+    max-width: 250px; 
+    max-height: 250px;
+    text-align: center;
+}
 
+.thumbnail {
+	text-align: center;
+}
 
+.challengeusers {
+	font-size: 3em;
+	margin-bottom: 20px;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#brvehomepage {
+	background: url("http://i.kinja-img.com/gawker-media/image/upload/tndkklvnxeoprzcusexl.jpg")
+	no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin-top: 0;	
+    height: 750px;
 }
 
 
-
+.navbar {
+	margin: 0;
+	height: 100%;
+}

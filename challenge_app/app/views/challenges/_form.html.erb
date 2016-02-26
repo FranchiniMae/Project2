@@ -16,6 +16,9 @@
 	<div> 
 		<%= f.text_field :reward, placeholder: "Reward", size: '60x6', required: true %>
 	</div><br>
+	<%= f.url_field :img_url, placeholder: "Challenge Picture", required: true %>
+	<br>
+	<br>
 	<%= f.submit :class => "btn btn-primary" %>
 <% end %>
 </div>

@@ -1,10 +1,12 @@
-<h4><%= link_to "Challenges", challenges_path %></h4>
+<h4 id="h1user">All Your Challenges</h4>
 
 
-<div><%= @user.first_name %> is a member of the following challenges</div>
+<div class="container" id="challengeinfo">
+	<div class="challengeusers">You have <%= @user.challenges.count %> challenges</div>
 
-<ul>
-	<% @challenges.each do |challenge| %>
-		<li><%= challenge.name %></li>
-	<% end %>
-</ul>
+	<ul>
+		<% @challenges.each do |challenge| %>
+			<li><%= challenge.name %></li>
+		<% end %>
+	</ul>
+</div>

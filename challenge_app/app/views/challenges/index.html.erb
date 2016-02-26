@@ -1,17 +1,25 @@
-Challenges go here!
-
-<% @challenges.each do |challenge| %>
-	<div>
-		<h2><%= link_to challenge.name, challenge_path(challenge) %></h2>
-		<%= challenge.description %><br>
-		<%= challenge.reward %>
-	</div>
-
-	<% if @current_user %>
-		<%= button_to "Join", challenge_users_path(challenge) %>
-	<% end %>
-	<br>
-
-<% end %>
-
 <div>
+	<h1 id="h1user">Join A Challenge</h1>
+</div>
+
+<div class="container">
+
+	<% @challenges.each do |challenge| %>
+	<!-- 	<div> -->
+		  <div class="col-xs-4 col-sm-4">
+		    <div class="thumbnail">
+		      <img id="challengepic" src="<%= challenge.img_url %>">
+					<h3>
+					<%= link_to challenge.name, challenge_path(challenge) %></h3>
+
+				<% if @current_user %>
+					<%= button_to "Join", challenge_users_path(challenge) %>
+				<% end %>
+	     
+		      </div>
+		    </div>
+		  <!-- </div> -->
+
+	<% end %>
+
+</div>
