@@ -16,7 +16,7 @@
 			<%= @challenge.reward %>
 		</div><Br>
 
-	<%= link_to "Leave Challenge", @challenge_users, :method => :delete, :class => 'btn btn-primary' %><br><Br>
+	<%= link_to "Leave Challenge", @challenge_users, :method => :delete, :class => 'btn btn-danger' %><br><Br>
 
 
 	<% if current_user && current_user.id == @challenge.creator_id %>
@@ -43,7 +43,7 @@
 		<h1 class="posttitle">Members' Thoughts</h1>
 
 			<div>
-				<%= link_to "Create a Post", new_post_path, :class => 'btn btn-primary' %>
+				<%= link_to "Create a Post", new_post_path, :class => 'btn btn-success' %>
 			</div>
 		<br><br>
 

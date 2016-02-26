@@ -197,7 +197,7 @@ ul {
 }
 
 #stats {
-	color: green;
+	color: #33AF6C;
 	font-size: 1.5em;
 }
 
@@ -218,4 +218,10 @@ ul {
 	margin-top: 5%;
 }
 
+.btn-primary {
+	background-color: #5ca39e;
+	border: none;
+}
 
+.badge {
+	background-color: #CABFAB;
