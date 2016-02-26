@@ -203,3 +203,11 @@ ul {
 	margin: 0 auto;
 	text-align: center;
 }
+
+#thanks {
+	font-family: 'Michroma', sans-serif;
+	text-align: center;
+	margin-bottom: 3%;
+	margin-top: 5%;
+	color: green;
+}
