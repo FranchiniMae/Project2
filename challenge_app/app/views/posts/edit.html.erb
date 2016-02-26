@@ -1,13 +1,15 @@
-<h2><%= @challenge.name %></h2>
+<h1 id="h1user"><%= @challenge.name %></h1>
 
-
-<%= form_for @post do |f| %>
-	<div>
-		<%= f.text_field :comment, placeholder: "Comment", required: true %>
-	</div>
-	<div>
-		<%= f.url_field :picture, placeholder: "Picture URL" %>
-	</div>
-
-	<%= f.submit "Update Post" %>
-<% end %>
+<div class="createform">
+	<%= form_for @post do |f| %>
+		<div>
+			<%= f.text_field :comment, placeholder: "Comment", required: true %>
+		</div>
+		<br>
+		<div>
+			<%= f.url_field :picture, placeholder: "Picture URL" %>
+		</div>
+		<br>
+		<%= f.submit "Update Post" %>
+	<% end %>
+</div>

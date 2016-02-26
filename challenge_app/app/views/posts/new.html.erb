@@ -1,14 +1,20 @@
-<%= form_for @post do |f| %>
-	<div>
-		<%= f.text_field :comment, placeholder: "Comment", required: true %>
-	</div>
-	<div>
-		<%= f.url_field :picture, placeholder: "Picture URL" %>
-	</div>
 
-	<div>
-		<%= f.collection_select :challenge_id, @challenges, :id, :name %>
-	</div>
+<h1 id="h1user">Add a Post</h1>
 
-	<%= f.submit %>
-<% end %>
+<div class="createform">
+	<%= form_for @post do |f| %>
+		<div>
+			<%= f.text_field :comment, placeholder: "Comment", required: true %>
+		</div>
+		<br>
+		<div>
+			<%= f.url_field :picture, placeholder: "Picture URL" %>
+		</div>
+		<br>
+		<div>
+			<%= f.collection_select :challenge_id, @challenges, :id, :name %>
+		</div>
+		<br>
+		<%= f.submit %>
+	<% end %>
+</div>
