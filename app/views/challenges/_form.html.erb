@@ -9,14 +9,14 @@
 	</div>
 	<Br>
 	<div>
-		<label> Goal Date </label>
+		<label id="goal"> Goal Date </label>
 		<%= f.date_select :goal_date, placeholder: "Goal Date", required: true %>
 	</div>
 	<br>
 	<div> 
 		<%= f.text_field :reward, placeholder: "Reward", size: '60x6', required: true %>
 	</div><br>
-	<%= f.url_field :img_url, placeholder: "Challenge Picture"%>
+	<%= f.url_field :img_url, placeholder: "Challenge Picture", size: '60x6'%>
 	<br>
 	<br>
 	<%= f.submit :class => "btn btn-primary" %>

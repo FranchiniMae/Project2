@@ -3,8 +3,8 @@
 <div id="edituser">
 	<%= render 'form' %>
 </div>
-<Br>
 
-<div id="h1user">
-<%= link_to "Delete User", @user, method: :delete %>
+<br> <div id="deleteuser">
+<%= link_to "Delete User", @user, method: :delete, :class => 'btn btn-danger' %>
 </div>
+

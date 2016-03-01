@@ -224,3 +224,28 @@ ul {
 
 .badge {
 	background-color: #CABFAB;
+}
+
+/* FORMS */
+input, textarea {
+	color: #95989C;
+}
+
+select {
+border-radius: 0;
+color: #95989C;
+height: 26%;
+width: 27%;
+text-indent: 5%;
+text-overflow: '';
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+background: #FFF url(images/arrow-select-home.png) no-repeat right center;
+}
+
+#goal {
+	color: #95989C;
+	font-weight: normal;
+}
+

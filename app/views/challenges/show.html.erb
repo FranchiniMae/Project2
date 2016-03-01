@@ -18,6 +18,11 @@
 
 	<%= link_to "Leave Challenge", @challenge_users, :method => :delete, :class => 'btn btn-danger' %><br><Br>
 
+	<% if @current_user %>
+					<%= button_to "Join Challenge", challenge_users_path(@challenge), :class => 'btn btn-success' %>
+				<% end %>
+	<br>
+
 
 	<% if current_user && current_user.id == @challenge.creator_id %>
 
