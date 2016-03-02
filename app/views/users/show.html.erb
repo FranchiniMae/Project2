@@ -40,6 +40,7 @@
 		<% @user.challenges.each do |challenge| %>
 			<div>
 			  <div class="col-sm-5 col-md-6">
+			  <a href="<%= challenge_path(challenge) %>">
 			    <div class="thumbnail">
 				      <img id="challengepic1" src="<%= challenge.img_url %>">
 				      	<h4 class="createform">

@@ -6,7 +6,7 @@
 
 	<ul>
 		<% @challenges.each do |challenge| %>
-			<li><%= challenge.name %></li>
+			<li id="bigtext"><%= challenge.name.upcase %></li>
 		<% end %>
 	</ul><br><br>
 	<%= link_to "Back to Profile", user_path(current_user), :class => 'btn btn-primary'%><br>
