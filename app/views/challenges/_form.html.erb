@@ -1,24 +1,28 @@
 <div class="col-md-4 col-md-offset-4">
 <%= form_for @challenge do |f| %>
 	<div>
-		<%= f.text_field :name, placeholder: "Name", size: '60x6', required: true %>
+		<%= f.text_field :name, placeholder: "Name", size: '60x6', required: true %> <sup>*</sup>
 	</div>
 	<Br>
 	<div>
-		<%= f.text_field :description, placeholder: "Description", size: '60x20', required: true %>
+		<%= f.text_field :description, placeholder: "Description", size: '60x20', required: true %> <sup>*</sup>
 	</div>
 	<Br>
 	<div>
 		<label id="greytext"> Goal Date </label>
-		<%= f.date_select :goal_date, placeholder: "Goal Date", required: true %>
+		<%= f.date_select :goal_date, placeholder: "Goal Date", required: true %> <sup>*</sup>
 	</div>
 	<br>
 	<div> 
-		<%= f.text_field :reward, placeholder: "Reward", size: '60x6', required: true %>
+		<%= f.text_field :reward, placeholder: "Reward", size: '60x6', required: true %> <sup>*</sup>
 	</div><br>
 	<%= f.url_field :img_url, placeholder: "Challenge Picture", size: '60x6'%>
 	<br>
 	<br>
+	<sup>*</sup> = required field
+	<br>
+	<br>
 	<%= f.submit :class => "btn btn-primary" %>
+	<br>
 <% end %>
 </div>

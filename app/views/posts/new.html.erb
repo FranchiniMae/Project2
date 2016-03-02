@@ -4,13 +4,17 @@
 <div class="createform">
 	<%= form_for @post do |f| %>
 		<div>
-			<%= f.text_field :comment, placeholder: "Comment", required: true, size: '60x6' %>
+			<%= f.text_field :comment, placeholder: "Comment", required: true, size: '60x6' %> <sup>*</sup>
 		</div>
 		<br>
 		<p id="greytext">Select Challenge:</p>
 		<div>
-			<%= f.collection_select :challenge_id, @challenges, :id, :name %>
+			<%= f.collection_select :challenge_id, @challenges, :id, :name %> <sup>*</sup>
 		</div>
+		<br>
+		<br>
+		<sup>*</sup> = required field
+		<br>
 		<br>
 		<%= f.submit :class => 'btn btn-success' %>
 	<% end %>

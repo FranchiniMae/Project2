@@ -1,26 +1,29 @@
 <%= form_for @user do |f| %>
 	<div>
-		<%= f.text_field :first_name, placeholder: "First Name", required: true, size: '60x6' %>
+		<%= f.text_field :first_name, placeholder: "First Name", required: true, size: '60x6' %> <sup>*</sup>
 	</div>
 	<br>
 	<div>
-		<%= f.text_field :last_name, placeholder: "Last Name", required: true, size: '60x6' %>
+		<%= f.text_field :last_name, placeholder: "Last Name", required: true, size: '60x6' %> <sup>*</sup>
 	</div>
 	<br>
 	<div>
-		<%= f.email_field :email, placeholder: "Email", required: true, size: '60x6' %>
+		<%= f.email_field :email, placeholder: "Email", required: true, size: '60x6' %> <sup>*</sup>
 	</div>
 	<br>
 	<div>
-		<%= f.password_field :password, placeholder: "Password", required: true, size: '60x6' %>
+		<%= f.password_field :password, placeholder: "Password", required: true, size: '60x6' %> <sup>*</sup>
 	</div>
 	<br>
 	<div>
-		<%= f.password_field :password_confirmation, placeholder: "Confirm Password", required: true, size: '60x6' %>
+		<%= f.password_field :password_confirmation, placeholder: "Confirm Password", required: true, size: '60x6' %> <sup>*</sup>
 	</div>
 	<Br>
 		<%= f.url_field :img_url, placeholder: "Profile Picture", size: '60x6'%>
 	<Br>
+	<br>
+	<sup>*</sup> = required field
+	<br>
 	<br>
 	<%= f.submit class: 'btn btn-primary' %>
 <% end %>

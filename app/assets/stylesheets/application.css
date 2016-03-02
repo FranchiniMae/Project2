@@ -252,3 +252,12 @@ background: #FFF url(images/arrow-select-home.png) no-repeat right center;
 #poststyle {
 	color: #78AB3A;
 }
+
+.postcomment {
+	text-align: left;
+}
+
+sup {
+	font-size: .9em;
+	color: red;
+}

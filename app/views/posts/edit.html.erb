@@ -3,12 +3,16 @@
 <div class="createform">
 	<%= form_for @post do |f| %>
 		<div>
-			<%= f.text_field :comment, placeholder: "Comment", required: true, size: '60x6', :class => 'forminput' %>
+			<%= f.text_field :comment, placeholder: "Comment", required: true, size: '60x6', :class => 'forminput' %> <sup>*</sup>
 		</div>
 		<br>
 		<div>
 			<%= f.url_field :picture, placeholder: "Picture URL", size: '60x6', :class => 'forminput' %>
 		</div>
+		<br>
+		<br>
+		<sup>*</sup> = required field
+		<br>
 		<br>
 		<%= f.submit :class => 'btn btn-success' %>
 	<% end %>
