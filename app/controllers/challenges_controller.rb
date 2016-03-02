@@ -24,6 +24,7 @@ class ChallengesController < ApplicationController
 	def show
 		@challenge = Challenge.find(params[:id])
 		@posts = Post.all
+
 	end 
 
 	def edit
