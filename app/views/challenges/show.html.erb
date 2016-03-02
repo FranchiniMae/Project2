@@ -53,11 +53,12 @@
 		<br><br>
 
 		<% @challenge.posts.each do |post| %>
-			<div class="post col-xs-6 col-md-4">
-				<img id="postpic" src="<%= post.picture %>"/><br><Br>
+			<!-- <div class="post col-xs-6 col-md-4"> -->
+				<!-- <img id="postpic" src="<%= post.picture %>"/><br><Br> -->
+ 
 					<div class="postcomment">
-						<%= link_to post.comment, post_path(post), :class => 'postlink' %>
-					</div>
+						<%= link_to post.comment, post_path(post), :class => 'postlink' %><br>
+					<!-- </div> -->
 			</div>
 		<% end %> 
 	</div>

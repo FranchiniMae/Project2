@@ -3,7 +3,7 @@
 
 
 <div class="createform">
-<%= @post.comment %><br>
+<b id="poststyle"><%= @post.user.first_name.upcase %> said:</b> <%= @post.comment %><br>
 <img src="<%= @post.picture %>"/>
 <Br><br>
 <% if current_user && current_user.id == @post.user_id %>

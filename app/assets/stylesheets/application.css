@@ -244,8 +244,11 @@ appearance: none;
 background: #FFF url(images/arrow-select-home.png) no-repeat right center;
 }
 
-#goal {
+#greytext {
 	color: #95989C;
 	font-weight: normal;
 }
 
+#poststyle {
+	color: #78AB3A;
+}

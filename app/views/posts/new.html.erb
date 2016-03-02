@@ -7,10 +7,7 @@
 			<%= f.text_field :comment, placeholder: "Comment", required: true, size: '60x6' %>
 		</div>
 		<br>
-		<div>
-			<%= f.url_field :picture, placeholder: "Picture URL", size: '60x6' %>
-		</div>
-		<br>
+		<p id="greytext">Select Challenge:</p>
 		<div>
 			<%= f.collection_select :challenge_id, @challenges, :id, :name %>
 		</div>
