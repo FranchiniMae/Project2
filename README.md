@@ -9,10 +9,12 @@ BRVE (Brave) provides users an opportunity to challenge themselves in ways they 
 ###II. Technologies Used:
 
 * Ruby on Rails
+* PostgreSQL with ActiveRecord 
+* BCrypt
 * Bootstrap
 * Google Fonts
-* CSS
-* HTML
+* CSS3
+* HTML5
 
 ####III. Unsolved Problems:
 
